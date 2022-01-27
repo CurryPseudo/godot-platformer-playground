@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://sprite_frame/player.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://scripts/player.gdns" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,3 +15,4 @@ current = true
 frames = ExtResource( 1 )
 animation = "idle"
 playing = true
+script = ExtResource( 2 )
