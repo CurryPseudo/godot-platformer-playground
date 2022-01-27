@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprite_frame/player.tres" type="SpriteFrames" id=1]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 10, 10 )
+
+[node name="World" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="Camera2D" type="Camera2D" parent="World"]
+scale = Vector2( 10, 10 )
+current = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="World"]
+position = Vector2( -4, -24 )
+scale = Vector2( 10, 10 )
+frames = ExtResource( 1 )
+animation = "idle"
+playing = true
