@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://sprite_frame/player.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/player.gdns" type="Script" id=2]
+[ext_resource path="res://tileset/tileset.tres" type="TileSet" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,8 +12,15 @@ follow_viewport_enable = true
 [node name="Camera2D" type="Camera2D" parent="World"]
 current = true
 
+[node name="TileMap" type="TileMap" parent="World"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 5, 29, 0, 6, 29, 1, 7, 29, 2, 196601, 28, 0, 196602, 28, 1, 196603, 28, 1, 196604, 28, 131076, 196605, 28, 2, 196607, 29, 0, 131072, 29, 1, 131073, 29, 1, 131074, 29, 1, 131075, 29, 2, 131077, 31, 262144, 131078, 31, 262145, 131079, 31, 262146, 262136, 28, 0, 262137, 28, 131077, 262138, 28, 65537, 262139, 28, 3, 262140, 28, 4, 262141, 28, 131074, 262143, 31, 262144, 196608, 31, 262145, 196609, 31, 262145, 196610, 31, 262145, 196611, 31, 262146, 196613, 29, 0, 196614, 29, 1, 196615, 29, 2, 327672, 28, 65541, 327673, 28, 65537, 327674, 28, 3, 327675, 28, 131074, 393208, 28, 131072, 393209, 28, 4, 393210, 28, 131074 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="World"]
 frames = ExtResource( 1 )
 animation = "idle"
+frame = 3
 playing = true
 script = ExtResource( 2 )
